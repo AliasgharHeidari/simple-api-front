@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple API</title>
+<style>
+  /* Reset */
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6da5ae, #3a97b3);
+    color: #fff;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .buttons button {
+    padding: 15px 50px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .buttons button:hover {
+    background: rgba(255,255,255,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <img style="width: 350px;" src="https://ik.imagekit.io/2gfia2nrp/blog/apa-dan-mengapa-golang-secara-singkat-padat-jelas/golang-square.webp" alt="GO icon">
+    <h1>Endpoins</h1>
+    <div class="buttons">
+      <button onclick="go('https://simple-api-3cka.onrender.com/gophers/members')">Members</button>
+      <button onclick="go('https://simple-api-3cka.onrender.com/gophers/teacher')">Teacher</button>
+      <button onclick="go('https://simple-api-3cka.onrender.com/gophers/contact')">Contact</button>
+      <button onclick="go('https://simple-api-3cka.onrender.com/gophers/website')">Website</button>
+    </div>
+  </div>
+
+  <script>
+    function go(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
